@@ -69,22 +69,65 @@
         android:layout_width="69dp"
         android:layout_height="69dp"
         android:background="@drawable/circle"
-        app:layout_constraintTop_toTopOf="@id/retangle1"
-        app:layout_constraintStart_toStartOf="@id/retangle1"/>
+        app:layout_constraintStart_toStartOf="@id/retangle1"
+        app:layout_constraintTop_toTopOf="@id/retangle1" />
 
-
+    <View
+        android:id="@+id/circle2"
+        android:layout_width="69dp"
+        android:layout_height="69dp"
+        android:background="@drawable/circle"
+        app:layout_constraintStart_toStartOf="@id/retangle2"
+        app:layout_constraintTop_toTopOf="@id/retangle2" />
 
     <TextView
+        android:id="@+id/produtostext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/red_hat_display_bold"
-        android:textSize="16sp"
         android:text="@string/produtos_e_acessorios"
         android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/retangle1"
         app:layout_constraintEnd_toEndOf="@id/retangle1"
         app:layout_constraintStart_toEndOf="@id/circle1"
         app:layout_constraintTop_toTopOf="@id/retangle1" />
+
+    <TextView
+        android:id="@+id/acessoriosText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/red_hat_display_bold"
+        android:text="@string/roupas_Intimas"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/retangle2"
+        app:layout_constraintStart_toStartOf="@id/produtostext"
+        app:layout_constraintTop_toTopOf="@id/retangle2" />
+
+    <ImageView
+        android:id="@+id/shopping_icon"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:background="@drawable/ic_outline_shopping_bag_24"
+        app:layout_constraintTop_toTopOf="@id/circle1"
+        app:layout_constraintBottom_toBottomOf="@id/circle1"
+        app:layout_constraintStart_toStartOf="@id/circle1"
+        app:layout_constraintEnd_toEndOf="@id/circle1"
+        android:contentDescription="@string/shopping_icon" />
+
+    <ImageView
+        android:id="@+id/lingerie_icon"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:background="@drawable/mdi_lingerie"
+        app:layout_constraintTop_toTopOf="@id/circle2"
+        app:layout_constraintBottom_toBottomOf="@id/circle2"
+        app:layout_constraintStart_toStartOf="@id/circle2"
+        app:layout_constraintEnd_toEndOf="@id/circle2"
+        android:contentDescription="@string/shopping_icon" />
+
+
 
 
 </android.support.constraint.ConstraintLayout>
