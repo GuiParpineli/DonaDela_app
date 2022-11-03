@@ -44,9 +44,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/what" />
 
-    <View
-        android:id="@+id/retangle1"
-        android:layout_width="270dp"
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="290dp"
         android:layout_height="69dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/rectangle"
@@ -54,31 +54,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/procura" />
 
-    <View
-        android:id="@+id/retangle2"
-        android:layout_width="270dp"
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="290dp"
         android:layout_height="69dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/rectangle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/retangle1" />
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
 
     <View
         android:id="@+id/circle1"
         android:layout_width="69dp"
         android:layout_height="69dp"
         android:background="@drawable/circle"
-        app:layout_constraintStart_toStartOf="@id/retangle1"
-        app:layout_constraintTop_toTopOf="@id/retangle1" />
+        app:layout_constraintStart_toStartOf="@id/button1"
+        app:layout_constraintTop_toTopOf="@id/button1" />
 
     <View
         android:id="@+id/circle2"
         android:layout_width="69dp"
         android:layout_height="69dp"
         android:background="@drawable/circle"
-        app:layout_constraintStart_toStartOf="@id/retangle2"
-        app:layout_constraintTop_toTopOf="@id/retangle2" />
+        app:layout_constraintStart_toStartOf="@id/button2"
+        app:layout_constraintTop_toTopOf="@id/button2" />
 
     <TextView
         android:id="@+id/produtostext"
@@ -87,11 +87,11 @@
         android:fontFamily="@font/red_hat_display_bold"
         android:text="@string/produtos_e_acessorios"
         android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/retangle1"
-        app:layout_constraintEnd_toEndOf="@id/retangle1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/button1"
+        app:layout_constraintEnd_toEndOf="@id/button1"
         app:layout_constraintStart_toEndOf="@id/circle1"
-        app:layout_constraintTop_toTopOf="@id/retangle1" />
+        app:layout_constraintTop_toTopOf="@id/button1" />
 
     <TextView
         android:id="@+id/acessoriosText"
@@ -100,10 +100,10 @@
         android:fontFamily="@font/red_hat_display_bold"
         android:text="@string/roupas_Intimas"
         android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/retangle2"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/button2"
         app:layout_constraintStart_toStartOf="@id/produtostext"
-        app:layout_constraintTop_toTopOf="@id/retangle2" />
+        app:layout_constraintTop_toTopOf="@id/button2" />
 
     <ImageView
         android:id="@+id/shopping_icon"
