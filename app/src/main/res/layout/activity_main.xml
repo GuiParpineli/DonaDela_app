@@ -87,7 +87,8 @@
         android:fontFamily="@font/red_hat_display_bold"
         android:text="@string/produtos_e_acessorios"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@id/button1"
         app:layout_constraintEnd_toEndOf="@id/button1"
         app:layout_constraintStart_toEndOf="@id/circle1"
@@ -100,9 +101,10 @@
         android:fontFamily="@font/red_hat_display_bold"
         android:text="@string/roupas_Intimas"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@id/button2"
-        app:layout_constraintStart_toStartOf="@id/produtostext"
+        app:layout_constraintEnd_toEndOf="@id/button2"
+        app:layout_constraintStart_toEndOf="@id/circle2"
         app:layout_constraintTop_toTopOf="@id/button2" />
 
     <ImageView

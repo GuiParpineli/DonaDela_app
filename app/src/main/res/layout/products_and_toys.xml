@@ -17,7 +17,7 @@
 
     <Button
         android:id="@+id/item1"
-        android:layout_width="316dp"
+        android:layout_width="320dp"
         android:layout_height="54dp"
         android:layout_marginTop="200dp"
         android:background="@drawable/retangle_fill"
@@ -34,7 +34,7 @@
 
     <Button
         android:id="@+id/item2"
-        android:layout_width="316dp"
+        android:layout_width="320dp"
         android:layout_height="54dp"
         android:layout_marginTop="80dp"
         android:background="@drawable/retangle_fill"
@@ -50,7 +50,7 @@
 
     <TextView
         android:id="@+id/shadow2"
-        android:layout_width="316dp"
+        android:layout_width="320dp"
         android:layout_height="54dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="6dp"
@@ -60,7 +60,7 @@
 
     <Button
         android:id="@+id/item3"
-        android:layout_width="316dp"
+        android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginTop="80dp"
         android:background="@drawable/retangle_fill"
@@ -76,7 +76,7 @@
 
     <TextView
         android:id="@+id/shadow3"
-        android:layout_width="316dp"
+        android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="6dp"
@@ -86,7 +86,7 @@
 
     <Button
         android:id="@+id/item4"
-        android:layout_width="316dp"
+        android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginTop="80dp"
         android:background="@drawable/retangle_fill"
@@ -94,7 +94,7 @@
         android:text="@string/acess_rios"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
