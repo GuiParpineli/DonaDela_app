@@ -46,17 +46,17 @@
         app:layout_constraintStart_toEndOf="@id/image_product"
         app:layout_constraintTop_toBottomOf="@id/name_product" />
 
-    <Button
+    <TextView
         android:id="@+id/btn_vermais"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginStart="160dp"
-        android:background="@drawable/retangle_fill"
-        android:fontFamily="@font/red_hat_display_bold"
+        android:fontFamily="@font/red_hat_display_black_italic"
         android:text="Ver Mais"
+        android:textSize="18sp"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+        android:textColor="@color/pink_dark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/product_description" />
 

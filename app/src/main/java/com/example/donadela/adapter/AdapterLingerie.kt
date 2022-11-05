@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -13,10 +14,18 @@ import com.example.donadela.model.Lingerie
 class AdapterLingerie(private val context: Context, private val lingeries: MutableList<Lingerie>) :
     RecyclerView.Adapter<AdapterLingerie.LingerieViewHolder>() {
 
+    var onItemClick: ((Lingerie) -> Unit)? = null
+
     inner class LingerieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val image = itemView.findViewById<ImageView>(R.id.image_product)
         val name = itemView.findViewById<TextView>(R.id.name_product)
         val description = itemView.findViewById<TextView>(R.id.product_description)
+
+        init {
+            itemView.setOnClickListener{
+                onItemClick?.invoke(lingeries[adapterPosition])
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LingerieViewHolder {
@@ -32,4 +41,5 @@ class AdapterLingerie(private val context: Context, private val lingeries: Mutab
     }
 
     override fun getItemCount(): Int = lingeries.size
+
 }

@@ -1,6 +1,9 @@
 package com.example.donadela
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -25,7 +28,7 @@ class LingerieActivity : AppCompatActivity() {
         val lingerie1 = Lingerie(
             R.drawable.ling01, "Lingerie sexy preta",
             "Lingerie linda para apimentar as coisas",
-            "R$29,90"
+            "R$29,90",
         )
         val lingerie2 = Lingerie(
             R.drawable.ling02, "Lingerie sexy preta",
@@ -49,5 +52,9 @@ class LingerieActivity : AppCompatActivity() {
         listLingerie.add(lingerie4)
         listLingerie.add(lingerie4)
 
+        adapterLingerie.onItemClick = {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
