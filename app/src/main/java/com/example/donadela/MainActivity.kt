@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportActionBar!!.hide()
+
         val btnProducts = findViewById<Button>(button_products)
         val btnLingerie = findViewById<Button>(button_lingerie)
 
@@ -21,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnLingerie.setOnClickListener {
-            val intent = Intent(this, Lingerie::class.java)
+            val intent = Intent(this, LingerieActivity::class.java)
             startActivity(intent)
         }
     }
