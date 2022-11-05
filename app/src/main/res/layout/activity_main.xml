@@ -7,7 +7,6 @@
     android:background="@drawable/background"
     tools:context=".MainActivity">
 
-
     <ImageView
         android:id="@+id/logoDona"
         android:layout_width="259dp"
@@ -45,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/what" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/button_products"
         android:layout_width="290dp"
         android:layout_height="69dp"
         android:layout_marginTop="60dp"
@@ -62,15 +61,15 @@
         android:background="@drawable/rectangle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintTop_toBottomOf="@+id/button_products" />
 
     <View
         android:id="@+id/circle1"
         android:layout_width="69dp"
         android:layout_height="69dp"
         android:background="@drawable/circle"
-        app:layout_constraintStart_toStartOf="@id/button1"
-        app:layout_constraintTop_toTopOf="@id/button1" />
+        app:layout_constraintStart_toStartOf="@id/button_products"
+        app:layout_constraintTop_toTopOf="@id/button_products" />
 
     <View
         android:id="@+id/circle2"
@@ -89,10 +88,10 @@
         android:textColor="@color/white"
         android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/button1"
-        app:layout_constraintEnd_toEndOf="@id/button1"
+        app:layout_constraintBottom_toBottomOf="@id/button_products"
+        app:layout_constraintEnd_toEndOf="@id/button_products"
         app:layout_constraintStart_toEndOf="@id/circle1"
-        app:layout_constraintTop_toTopOf="@id/button1" />
+        app:layout_constraintTop_toTopOf="@id/button_products" />
 
     <TextView
         android:id="@+id/acessoriosText"
