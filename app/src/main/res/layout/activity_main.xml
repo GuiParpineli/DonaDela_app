@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/procura" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_lingerie"
         android:layout_width="290dp"
         android:layout_height="69dp"
         android:layout_marginTop="30dp"
@@ -76,8 +76,8 @@
         android:layout_width="69dp"
         android:layout_height="69dp"
         android:background="@drawable/circle"
-        app:layout_constraintStart_toStartOf="@id/button2"
-        app:layout_constraintTop_toTopOf="@id/button2" />
+        app:layout_constraintStart_toStartOf="@id/button_lingerie"
+        app:layout_constraintTop_toTopOf="@id/button_lingerie" />
 
     <TextView
         android:id="@+id/produtostext"
@@ -101,10 +101,10 @@
         android:text="@string/roupas_Intimas"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/button2"
-        app:layout_constraintEnd_toEndOf="@id/button2"
+        app:layout_constraintBottom_toBottomOf="@id/button_lingerie"
+        app:layout_constraintEnd_toEndOf="@id/button_lingerie"
         app:layout_constraintStart_toEndOf="@id/circle2"
-        app:layout_constraintTop_toTopOf="@id/button2" />
+        app:layout_constraintTop_toTopOf="@id/button_lingerie" />
 
     <ImageView
         android:id="@+id/shopping_icon"
