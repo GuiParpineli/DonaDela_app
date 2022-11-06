@@ -30,13 +30,13 @@ class LingerieActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val recyclerView_lingerie = findViewById<RecyclerView>(R.id.list_lingerie_products)
-        recyclerView_lingerie.layoutManager = LinearLayoutManager(this)
-        recyclerView_lingerie.setHasFixedSize(true)
+        val recyclerviewLingerie = findViewById<RecyclerView>(R.id.list_lingerie_products)
+        recyclerviewLingerie.layoutManager = LinearLayoutManager(this)
+        recyclerviewLingerie.setHasFixedSize(true)
 
         val listLingerie: MutableList<Lingerie> = mutableListOf()
         val adapterLingerie = AdapterLingerie(this, listLingerie)
-        recyclerView_lingerie.adapter = adapterLingerie
+        recyclerviewLingerie.adapter = adapterLingerie
 
         val lingerie1 = Lingerie(
             R.drawable.ling01, "Lingerie 01",
@@ -67,7 +67,7 @@ class LingerieActivity : AppCompatActivity() {
 
 
         adapterLingerie.onItemClick = { lingeries ->
-            var item =
+            val item =
                 Lingerie(lingeries.image, lingeries.name, lingeries.description, lingeries.price)
             Log.d("TAG", item.toString())
             val intent = Intent(this, ProductDetails::class.java)

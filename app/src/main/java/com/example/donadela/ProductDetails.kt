@@ -12,9 +12,10 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.donadela.R.layout.products_details
 import com.example.donadela.model.Lingerie
+import java.io.Serializable
 
 class ProductDetails : AppCompatActivity() {
-    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(products_details)
@@ -44,12 +45,13 @@ class ProductDetails : AppCompatActivity() {
         }
 
         val text = findViewById<TextView>(R.id.text_name_of_product)
-        val name = intent.getStringExtra("name")
-        val lingerie = intent.getParcelableExtra("item", Lingerie::class.java)
-        text.text = lingerie?.name.toString()
-        val image = lingerie?.image
 
-        val items = intArrayOf(R.drawable.ling01, R.drawable.ling02, R.drawable.lin03)
+        val lingerie = intent.getParcelableExtra<Lingerie>("item")
+
+        text.text = lingerie?.name.toString()
+        val image = lingerie!!.image
+
+        val items = intArrayOf(image, R.drawable.ling02)
         var index = 0
 
         val imageSwitcher = findViewById<ImageSwitcher>(R.id.image_product_details)
@@ -57,7 +59,6 @@ class ProductDetails : AppCompatActivity() {
         imageSwitcher.setFactory {
             val imgView = ImageView(applicationContext)
             imgView.scaleType = ImageView.ScaleType.FIT_CENTER
-            imgView.setPadding(8, 8, 8, 8)
             imgView
         }
 
@@ -77,7 +78,7 @@ class ProductDetails : AppCompatActivity() {
         imageSwitcher?.outAnimation = imgOut
 
         btnPrev.setOnClickListener {
-            index = if (index - 1 >= 0) index - 1 else 2
+            index = if (index - 1 >= 0) index - 1 else items.size -1
             imageSwitcher?.setImageResource(items[index])
         }
 
