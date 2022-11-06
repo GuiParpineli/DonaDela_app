@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="150dp"
+        android:layout_margin="10dp"
         android:paddingTop="170dp"
         android:paddingBottom="40dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_bar"
