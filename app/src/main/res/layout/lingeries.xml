@@ -9,10 +9,10 @@
         android:id="@+id/searchbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:layout_margin="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/background_items"
+        android:padding="10dp"
         android:text="Search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,11 +20,11 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_lingerie_products"
-        android:paddingBottom="40dp"
-        android:paddingTop="200dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="150dp"
+        android:paddingTop="200dp"
+        android:paddingBottom="40dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_bar"
         app:layout_constraintTop_toBottomOf="@id/searchbar" />
 
@@ -64,8 +64,8 @@
         android:layout_width="100dp"
         android:layout_height="90dp"
         android:background="@drawable/circle_pink"
-        app:layout_constraintEnd_toEndOf="@id/bottom_bar"
         android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/bottom_bar"
         app:layout_constraintTop_toTopOf="@id/bottom_bar" />
 
     <ImageView
@@ -80,6 +80,7 @@
         app:layout_constraintTop_toTopOf="@id/bottom_bar" />
 
     <TextView
+        android:id="@+id/text_shopping"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/red_hat_display_bold"
@@ -134,4 +135,5 @@
         app:layout_constraintBottom_toTopOf="@id/whatsapp"
         app:layout_constraintEnd_toEndOf="@id/whatsapp"
         app:layout_constraintStart_toStartOf="@id/whatsapp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

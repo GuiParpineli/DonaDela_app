@@ -125,8 +125,29 @@
         android:layout_width="100dp"
         android:layout_height="90dp"
         android:background="@drawable/circle_pink"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@id/bottom_bar"
         app:layout_constraintStart_toStartOf="@id/bottom_bar"
+        app:layout_constraintTop_toTopOf="@id/bottom_bar" />
+
+    <View
+        android:id="@+id/lingerie_active"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:visibility="invisible"
+        android:background="@drawable/circle_pink"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_bar"
+        app:layout_constraintEnd_toStartOf="@id/contato_active"
+        app:layout_constraintStart_toEndOf="@id/produts_bottom_bar"
+        app:layout_constraintTop_toTopOf="@id/bottom_bar" />
+
+    <View
+        android:id="@+id/contato_active"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:background="@drawable/circle_pink"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/bottom_bar"
         app:layout_constraintTop_toTopOf="@id/bottom_bar" />
 
     <ImageView
@@ -141,6 +162,7 @@
         app:layout_constraintTop_toTopOf="@id/bottom_bar" />
 
     <TextView
+        android:id="@+id/text_shopping"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/red_hat_display_bold"
@@ -158,11 +180,12 @@
         android:layout_marginTop="10dp"
         android:src="@drawable/mdi_lingerie"
         app:layout_constraintBottom_toBottomOf="@id/bottom_bar"
-        app:layout_constraintEnd_toStartOf="@id/whatsapp"
-        app:layout_constraintStart_toEndOf="@id/icon_shopping_bottom"
+        app:layout_constraintEnd_toEndOf="@id/lingerie_active"
+        app:layout_constraintStart_toStartOf="@id/lingerie_active"
         app:layout_constraintTop_toTopOf="@id/bottom_bar" />
 
     <TextView
+        android:id="@+id/lingerie_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/red_hat_display_bold"
@@ -178,10 +201,10 @@
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="40dp"
         android:src="@drawable/akar_icons_whatsapp_fill"
         app:layout_constraintBottom_toBottomOf="@id/bottom_bar"
-        app:layout_constraintEnd_toEndOf="@id/bottom_bar"
+        app:layout_constraintEnd_toEndOf="@id/contato_active"
+        app:layout_constraintStart_toStartOf="@id/contato_active"
         app:layout_constraintTop_toTopOf="@id/bottom_bar" />
 
     <TextView
@@ -194,6 +217,5 @@
         app:layout_constraintBottom_toTopOf="@id/whatsapp"
         app:layout_constraintEnd_toEndOf="@id/whatsapp"
         app:layout_constraintStart_toStartOf="@id/whatsapp" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

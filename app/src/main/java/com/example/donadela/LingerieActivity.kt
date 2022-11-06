@@ -3,6 +3,8 @@ package com.example.donadela
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +17,18 @@ class LingerieActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(lingeries)
         supportActionBar!!.hide()
+
+        val produtcsBar = findViewById<ImageView>(R.id.icon_shopping_bottom)
+        val textShopping = findViewById<TextView>(R.id.text_shopping)
+
+        produtcsBar.setOnClickListener {
+            val intent = Intent(this, ProductsAndToys::class.java)
+            startActivity(intent)
+        }
+        textShopping.setOnClickListener {
+            val intent = Intent(this, ProductsAndToys::class.java)
+            startActivity(intent)
+        }
 
         val recyclerView_lingerie = findViewById<RecyclerView>(R.id.list_lingerie_products)
         recyclerView_lingerie.layoutManager = LinearLayoutManager(this)
