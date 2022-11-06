@@ -39,17 +39,17 @@ class LingerieActivity : AppCompatActivity() {
         recyclerView_lingerie.adapter = adapterLingerie
 
         val lingerie1 = Lingerie(
-            R.drawable.ling01, "Lingerie sexy preta",
+            R.drawable.ling01, "Lingerie 01",
             "Lingerie linda para apimentar as coisas",
             "R$29,90",
         )
         val lingerie2 = Lingerie(
-            R.drawable.ling02, "Lingerie sexy preta",
+            R.drawable.ling02, "Lingerie 02",
             "Lingerie linda para apimentar as coisas",
             "R$29,90"
         )
         val lingerie3 = Lingerie(
-            R.drawable.lin03, "Lingerie sexy preta",
+            R.drawable.lin03, "Lingerie 03",
             "Lingerie linda para apimentar as coisas",
             "R$29,90"
         )
@@ -70,7 +70,7 @@ class LingerieActivity : AppCompatActivity() {
             var item =
                 Lingerie(lingeries.image, lingeries.name, lingeries.description, lingeries.price)
             Log.d("TAG", item.toString())
-            val intent = Intent(this, Product_details::class.java)
+            val intent = Intent(this, ProductDetails::class.java)
             intent.putExtra("item", item)
             startActivity(intent)
         }
