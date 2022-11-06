@@ -23,10 +23,12 @@
 
     <Button
         android:id="@+id/btn_prev_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
         android:layout_margin="10dp"
         android:background="@drawable/retangle_fill"
+        android:fontFamily="@font/red_hat_display_bold"
+        android:textAllCaps="false"
         android:text="Anterior"
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@id/btn_nex_image"
@@ -35,9 +37,11 @@
 
     <Button
         android:id="@+id/btn_nex_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
         android:layout_margin="10dp"
+        android:fontFamily="@font/red_hat_display_bold"
+        android:textAllCaps="false"
         android:background="@drawable/retangle_fill"
         android:text="Seguinte"
         android:textColor="@color/white"
@@ -58,12 +62,13 @@
         app:layout_constraintTop_toBottomOf="@id/btn_prev_image" />
 
     <TextView
+        android:id="@+id/text_description"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/red_hat_display_bold"
         android:maxLines="4"
         android:padding="10dp"
-        android:text="DESCRIÇÃO: Sua principal função é aquecer a região onde foi aplicação, excitando ainda mais o seu parceiro(a) e facilitando até o orgasmo. 15g"
+        android:text="Sua principal função é aquecer a região onde foi aplicação, excitando ainda mais o seu parceiro(a) e facilitando até o orgasmo. 15g"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_name_of_product"
         app:layout_constraintStart_toStartOf="parent" />
@@ -175,5 +180,19 @@
         app:layout_constraintBottom_toTopOf="@id/whatsapp"
         app:layout_constraintEnd_toEndOf="@id/whatsapp"
         app:layout_constraintStart_toStartOf="@id/whatsapp" />
+
+    <Button
+        android:id="@+id/btn_add_to_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/retangle_fill"
+        android:fontFamily="@font/red_hat_display_bold"
+        android:text="Add ao Carrinho"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

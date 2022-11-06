@@ -22,10 +22,10 @@ class ProductDetails : AppCompatActivity() {
 
         val goLingeries = findViewById<ImageView>(R.id.icon_lingerie)
         val goLingeriestxt = findViewById<TextView>(R.id.lingerie_text)
-        val produtcsBar = findViewById<ImageView>(R.id.icon_shopping_bottom)
+        val productsBar = findViewById<ImageView>(R.id.icon_shopping_bottom)
         val textShopping = findViewById<TextView>(R.id.text_shopping)
 
-        produtcsBar.setOnClickListener {
+        productsBar.setOnClickListener {
             val intent = Intent(this, ProductsAndToys::class.java)
             startActivity(intent)
         }
@@ -47,6 +47,7 @@ class ProductDetails : AppCompatActivity() {
         val name = intent.getStringExtra("name")
         val lingerie = intent.getParcelableExtra("item", Lingerie::class.java)
         text.text = lingerie?.name.toString()
+        val image = lingerie?.image
 
         val items = intArrayOf(R.drawable.ling01, R.drawable.ling02, R.drawable.lin03)
         var index = 0
