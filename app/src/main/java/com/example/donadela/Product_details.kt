@@ -13,6 +13,8 @@ class Product_details : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(products_details)
+        supportActionBar!!.hide()
+
         val text = findViewById<TextView>(R.id.text_details)
         val name = intent.getStringExtra("name")
         val lingerie = intent.getParcelableExtra("item",Lingerie::class.java)
