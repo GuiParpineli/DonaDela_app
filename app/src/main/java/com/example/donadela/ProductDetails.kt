@@ -3,6 +3,7 @@ package com.example.donadela
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ImageSwitcher
@@ -25,6 +26,11 @@ class ProductDetails : AppCompatActivity() {
         val goLingeriestxt = findViewById<TextView>(R.id.lingerie_text)
         val productsBar = findViewById<ImageView>(R.id.icon_shopping_bottom)
         val textShopping = findViewById<TextView>(R.id.text_shopping)
+        val productsIcon = findViewById<View>(R.id.products_bottom_bar)
+        val roupaIntima = findViewById<View>(R.id.lingerie_active)
+
+        productsIcon.setVisibility(View.INVISIBLE)
+        roupaIntima.setVisibility(View.VISIBLE)
 
         productsBar.setOnClickListener {
             val intent = Intent(this, ProductsAndToys::class.java)

@@ -65,7 +65,6 @@ class LingerieActivity : AppCompatActivity() {
         listLingerie.add(lingerie4)
         listLingerie.add(lingerie4)
 
-
         adapterLingerie.onItemClick = { lingeries ->
             val item =
                 Lingerie(lingeries.image, lingeries.name, lingeries.description, lingeries.price)
