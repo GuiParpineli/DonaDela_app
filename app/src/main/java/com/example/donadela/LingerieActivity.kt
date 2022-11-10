@@ -8,14 +8,14 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.donadela.R.layout.lingeries
+import com.example.donadela.R.layout.products_list
 import com.example.donadela.adapter.AdapterLingerie
 import com.example.donadela.model.Lingerie
 
 class LingerieActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(lingeries)
+        setContentView(products_list)
         supportActionBar!!.hide()
 
         val produtcsBar = findViewById<ImageView>(R.id.icon_shopping_bottom)
