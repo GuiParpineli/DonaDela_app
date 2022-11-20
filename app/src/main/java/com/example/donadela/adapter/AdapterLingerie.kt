@@ -4,17 +4,16 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.donadela.R
-import com.example.donadela.model.Lingerie
+import com.example.donadela.model.Product
 
-class AdapterLingerie(private val context: Context, private val lingeries: MutableList<Lingerie>) :
+class AdapterLingerie(private val context: Context, private val lingeries: MutableList<Product>) :
     RecyclerView.Adapter<AdapterLingerie.LingerieViewHolder>() {
 
-    var onItemClick: ((Lingerie) -> Unit)? = null
+    var onItemClick: ((Product) -> Unit)? = null
 
     inner class LingerieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val image = itemView.findViewById<ImageView>(R.id.image_product)
