@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.example.donadela.R
@@ -38,7 +39,7 @@ class ProductDetailsFragment : Fragment(), ProductsDetailsView {
     override fun showProductsDetails(product: Product) {
         this.product = product
         val image = product.image
-        val items = intArrayOf(image, R.drawable.ling02)
+        val items = intArrayOf(image, R.drawable.ling01)
         var index = 0
 
         val imageSwitcher = binding.imageProductDetails
@@ -53,6 +54,26 @@ class ProductDetailsFragment : Fragment(), ProductsDetailsView {
 
         binding.textNameOfProduct.text = product.name
         binding.textDescription.text = product.description
+
+        val imgIn = AnimationUtils.loadAnimation(
+            requireContext(), android.R.anim.slide_in_left
+        )
+        imageSwitcher.inAnimation = imgIn
+
+        val imgOut = AnimationUtils.loadAnimation(
+            requireContext(), android.R.anim.slide_out_right
+        )
+        imageSwitcher.outAnimation = imgOut
+
+        binding.btnPrevImage.setOnClickListener{
+            index = if (index - 1 >= 0) index - 1 else items.size -1
+            imageSwitcher.setImageResource(items[index])
+        }
+
+        binding.btnNexImage.setOnClickListener {
+            index = if (index + 1 < items.size) index + 1 else 0
+            imageSwitcher.setImageResource(items[index])
+        }
     }
 
     override fun errorProductNotFound() {
