@@ -1,86 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/background"
-    android:layout_height="match_parent">
-
-    <View
-        android:id="@+id/background"
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
-        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="30dp"
-        android:background="@drawable/background_items" />
-
-    <ImageSwitcher
-        android:id="@+id/image_product_details"
-        android:layout_width="350dp"
-        android:layout_height="300dp"
-        android:layout_margin="20dp"
-        android:padding="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/background" />
-
-    <Button
-        android:id="@+id/btn_prev_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@drawable/retangle_fill"
-        android:fontFamily="@font/red_hat_display_bold"
-        android:textAllCaps="false"
-        android:text="@string/anterior"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@id/btn_nex_image"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_product_details" />
-
-    <Button
-        android:id="@+id/btn_nex_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:fontFamily="@font/red_hat_display_bold"
-        android:textAllCaps="false"
-        android:background="@drawable/retangle_fill"
-        android:text="@string/seguinte"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_prev_image"
-        app:layout_constraintTop_toBottomOf="@id/image_product_details" />
-
-
-    <TextView
-        android:id="@+id/text_name_of_product"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/red_hat_display_black_italic"
-        android:gravity="center"
-        android:text="@string/nome_produto"
-        android:textSize="22sp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_prev_image" />
-
-    <TextView
-        android:id="@+id/text_description"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/red_hat_display_bold"
-        android:gravity="center"
-        android:maxLines="4"
-        android:padding="20dp"
-        android:text="@string/text_exemple_description"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_name_of_product"
-        app:layout_constraintStart_toStartOf="parent" />
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <View
         android:id="@+id/bottom_bar"
@@ -154,7 +76,8 @@
         app:layout_constraintBottom_toBottomOf="@id/bottom_bar"
         app:layout_constraintEnd_toEndOf="@id/lingerie_active"
         app:layout_constraintStart_toStartOf="@id/lingerie_active"
-        app:layout_constraintTop_toTopOf="@id/bottom_bar" />
+        app:layout_constraintTop_toTopOf="@id/bottom_bar"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/lingerie_text"
@@ -177,7 +100,8 @@
         app:layout_constraintBottom_toBottomOf="@id/bottom_bar"
         app:layout_constraintEnd_toEndOf="@id/contact_active"
         app:layout_constraintStart_toStartOf="@id/contact_active"
-        app:layout_constraintTop_toTopOf="@id/bottom_bar" />
+        app:layout_constraintTop_toTopOf="@id/bottom_bar"
+        android:contentDescription="TODO" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -190,18 +114,5 @@
         app:layout_constraintEnd_toEndOf="@id/whatsapp"
         app:layout_constraintStart_toStartOf="@id/whatsapp" />
 
-    <Button
-        android:id="@+id/btn_add_to_cart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/retangle_fill"
-        android:fontFamily="@font/red_hat_display_bold"
-        android:text="@string/add_ao_carrinho"
-        android:textAllCaps="false"
-        android:padding="10dp"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

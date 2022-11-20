@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.donadela.R.layout.lingerie_activity
 import com.example.donadela.R.layout.products_list
+import com.example.donadela.components.BottomBarFragment
 import com.example.donadela.components.ProductListFragment
 import com.example.donadela.model.Product
 
@@ -15,6 +16,10 @@ class LingerieActivity : AppCompatActivity(), ProductListFragment.OnProductClick
 
     private val listFragment: ProductListFragment by lazy {
         supportFragmentManager.findFragmentById(R.id.fragmentList) as ProductListFragment
+    }
+
+    private val fragmentBar: BottomBarFragment by lazy {
+        supportFragmentManager.findFragmentById(R.id.bottom_bar) as BottomBarFragment
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
