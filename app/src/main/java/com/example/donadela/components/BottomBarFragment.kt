@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.donadela.LingerieActivity
+import com.example.donadela.ProductDetails
 import com.example.donadela.ProductsAndToys
 import com.example.donadela.databinding.FragmentBottomBarBinding
 
@@ -30,20 +31,29 @@ class BottomBarFragment : Fragment(){
             val intent = Intent(requireContext(), ProductsAndToys::class.java)
             startActivity(intent)
         }
-        binding.textShopping.setOnClickListener{
+        binding.textShopping.setOnClickListener {
             val intent = Intent(requireContext(), ProductsAndToys::class.java)
             startActivity(intent)
         }
-        binding.lingerieActive.setOnClickListener{
+        binding.lingerieActive.setOnClickListener {
             val intent = Intent(requireContext(), LingerieActivity::class.java)
             startActivity(intent)
         }
-        binding.lingerieText.setOnClickListener{
+        binding.lingerieText.setOnClickListener {
             val intent = Intent(requireContext(), LingerieActivity::class.java)
             startActivity(intent)
         }
 
-        binding.productsBottomBar.visibility = View.INVISIBLE
-        binding.lingerieActive.visibility = View.VISIBLE
+        if (activity is LingerieActivity) {
+            binding.productsBottomBar.visibility = View.INVISIBLE
+            binding.lingerieActive.visibility = View.VISIBLE
+        } else if (activity is ProductDetails) {
+            binding.productsBottomBar.visibility = View.INVISIBLE
+            binding.lingerieActive.visibility = View.INVISIBLE
+        } else {
+            binding.productsBottomBar.visibility = View.VISIBLE
+            binding.lingerieActive.visibility = View.INVISIBLE
+        }
+
     }
 }
