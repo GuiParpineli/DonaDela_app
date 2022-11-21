@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.donadela.R.layout.activity_product_details
+import com.example.donadela.components.BottomBarFragment
 import com.example.donadela.components.ProductDetailsFragment
 
 class ProductDetails : AppCompatActivity() {
@@ -27,6 +28,7 @@ class ProductDetails : AppCompatActivity() {
             .replace(R.id.details, fragment, ProductDetailsFragment.TAG_DETAILS)
             .commit()
     }
+
 
     companion object {
         private const val EXTRA_PRODUCT_ID = "product_id"

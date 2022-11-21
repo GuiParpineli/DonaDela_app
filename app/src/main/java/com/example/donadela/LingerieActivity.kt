@@ -29,7 +29,6 @@ class LingerieActivity : AppCompatActivity(), ProductListFragment.OnProductClick
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(lingerie_activity)
-        supportFragmentManager.findFragmentById(R.id.bottom_bar) as BottomBarFragment
     }
 
     override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
