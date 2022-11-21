@@ -74,7 +74,7 @@ object MemoryRepository : ProductRepository {
         callback(
             if (term.isEmpty()) productsList
             else productsList.filter {
-                it.name?.uppercase()?.contains(term.uppercase())!!
+                it.name.uppercase().contains(term.uppercase())
             }
         )
     }

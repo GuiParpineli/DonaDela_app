@@ -30,7 +30,15 @@ class BottomBarFragment : Fragment(){
             val intent = Intent(requireContext(), ProductsAndToys::class.java)
             startActivity(intent)
         }
+        binding.textShopping.setOnClickListener{
+            val intent = Intent(requireContext(), ProductsAndToys::class.java)
+            startActivity(intent)
+        }
         binding.lingerieActive.setOnClickListener{
+            val intent = Intent(requireContext(), LingerieActivity::class.java)
+            startActivity(intent)
+        }
+        binding.lingerieText.setOnClickListener{
             val intent = Intent(requireContext(), LingerieActivity::class.java)
             startActivity(intent)
         }

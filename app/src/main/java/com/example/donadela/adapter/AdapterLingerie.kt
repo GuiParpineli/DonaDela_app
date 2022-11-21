@@ -16,9 +16,9 @@ class AdapterLingerie(private val context: Context, private val lingeries: Mutab
     var onItemClick: ((Product) -> Unit)? = null
 
     inner class LingerieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val image = itemView.findViewById<ImageView>(R.id.image_product)
-        val name = itemView.findViewById<TextView>(R.id.name_product)
-        val description = itemView.findViewById<TextView>(R.id.product_description)
+        val image = itemView.findViewById<ImageView>(R.id.image_product)!!
+        val name: TextView = itemView.findViewById(R.id.name_product)
+        val description: TextView = itemView.findViewById(R.id.product_description)
 
         init {
             itemView.setOnClickListener{
@@ -29,8 +29,7 @@ class AdapterLingerie(private val context: Context, private val lingeries: Mutab
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LingerieViewHolder {
         val itemList = LayoutInflater.from(context).inflate(R.layout.lingerie_item, parent, false)
-        val holder = LingerieViewHolder(itemList)
-        return holder
+        return LingerieViewHolder(itemList)
     }
 
     override fun onBindViewHolder(holder: LingerieViewHolder, position: Int) {

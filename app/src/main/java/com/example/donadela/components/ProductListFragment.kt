@@ -7,10 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.donadela.R
 import com.example.donadela.adapter.AdapterLingerie
-import com.example.donadela.databinding.ProductsDetailsBinding
 import com.example.donadela.databinding.ProductsListBinding
 import com.example.donadela.model.Product
 import com.example.donadela.service.MemoryRepository
@@ -41,16 +39,16 @@ class ProductListFragment : Fragment(), ProductsListView {
         super.onViewCreated(view, savedInstanceState)
         val recyclerView = requireView().findViewById<RecyclerView>(R.id.list_lingerie_products)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView.setHasFixedSize(true)
         val adapter = AdapterLingerie(requireContext(),listProduct)
+        recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
+        adapter.notifyItemRangeChanged(0, listProduct.size)
 
         adapter.onItemClick = { listProduct ->
             val item  = Product(listProduct.id, listProduct.image, listProduct.name, listProduct.description, listProduct.price)
             presenter.showProductDetails(item)
         }
     }
-
 
     override fun showProducts(products: List<Product>) {
         listProduct = products as MutableList<Product>
@@ -67,7 +65,12 @@ class ProductListFragment : Fragment(), ProductsListView {
         fun onProductClick(product: Product)
     }
 
+    fun search(text: String){
+        presenter.searchProducts(text)
+    }
+
     fun clearSearch() {
+        presenter.searchProducts("")
     }
 
 }
