@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -41,8 +42,8 @@ class ProductListFragment : Fragment(), ProductsListView {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         val adapter = AdapterLingerie(requireContext(),listProduct)
         recyclerView.setHasFixedSize(true)
+
         recyclerView.adapter = adapter
-        adapter.notifyItemRangeChanged(0, listProduct.size)
 
         adapter.onItemClick = { listProduct ->
             val item  = Product(listProduct.id, listProduct.image, listProduct.name, listProduct.description, listProduct.price)
@@ -51,7 +52,8 @@ class ProductListFragment : Fragment(), ProductsListView {
     }
 
     override fun showProducts(products: List<Product>) {
-        listProduct = products as MutableList<Product>
+        listProduct.clear()
+        listProduct.addAll(products)
     }
 
     override fun showProductDetails(product: Product) {

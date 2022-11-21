@@ -32,6 +32,8 @@ class AdapterLingerie(private val context: Context, private val lingeries: Mutab
         return LingerieViewHolder(itemList)
     }
 
+
+
     override fun onBindViewHolder(holder: LingerieViewHolder, position: Int) {
         holder.image.setImageResource(lingeries[position].image)
         holder.name.text = lingeries[position].name

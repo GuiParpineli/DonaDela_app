@@ -74,7 +74,7 @@ class LingerieActivity : AppCompatActivity(), ProductListFragment.OnProductClick
                 searchItem.expandActionView()
                 searchView?.setQuery(query, true)
                 searchView?.clearFocus()
-            }, 3000)
+            }, 1000)
         }
         return true
     }
