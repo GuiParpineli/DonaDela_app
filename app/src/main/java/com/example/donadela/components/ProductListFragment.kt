@@ -4,11 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.donadela.R
 import com.example.donadela.adapter.AdapterLingerie
 import com.example.donadela.databinding.ProductsListBinding
 import com.example.donadela.model.Product
@@ -22,11 +19,6 @@ class ProductListFragment : Fragment(), ProductsListView {
     private var _binding: ProductsListBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        presenter.searchProducts("")
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -38,22 +30,24 @@ class ProductListFragment : Fragment(), ProductsListView {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val recyclerView = requireView().findViewById<RecyclerView>(R.id.list_lingerie_products)
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        val adapter = AdapterLingerie(requireContext(),listProduct)
-        recyclerView.setHasFixedSize(true)
-
-        recyclerView.adapter = adapter
-
-        adapter.onItemClick = { listProduct ->
-            val item  = Product(listProduct.id, listProduct.image, listProduct.name, listProduct.description, listProduct.price)
-            presenter.showProductDetails(item)
-        }
+        presenter.searchProducts("")
     }
 
     override fun showProducts(products: List<Product>) {
-        listProduct.clear()
         listProduct.addAll(products)
+        _binding!!.listLingerieProducts.layoutManager = LinearLayoutManager(requireContext())
+        val adapter = AdapterLingerie(requireView().context, products as MutableList<Product>)
+        _binding?.listLingerieProducts?.adapter = adapter
+        adapter.onItemClick = { listProduct ->
+            val item = Product(
+                listProduct.id,
+                listProduct.image,
+                listProduct.name,
+                listProduct.description,
+                listProduct.price
+            )
+            presenter.showProductDetails(item)
+        }
     }
 
     override fun showProductDetails(product: Product) {

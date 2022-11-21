@@ -37,6 +37,9 @@ class ProductDetailsFragment : Fragment(), ProductsDetailsView {
 
     override fun showProductsDetails(product: Product) {
         this.product = product
+        binding.textNameOfProduct.text = product.name
+        binding.textDescription.text = product.description
+
         val image = product.image
         val items = intArrayOf(image, R.drawable.ling01)
         var index = 0
@@ -51,8 +54,6 @@ class ProductDetailsFragment : Fragment(), ProductsDetailsView {
 
         imageSwitcher.setImageResource(items[index])
 
-        binding.textNameOfProduct.text = product.name
-        binding.textDescription.text = product.description
 
         val imgIn = AnimationUtils.loadAnimation(
             requireContext(), android.R.anim.slide_in_left
